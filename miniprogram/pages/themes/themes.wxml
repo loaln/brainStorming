@@ -1,0 +1,12 @@
+<!--pages/idea/idea.wxml-->
+<import src="theme/theme-template.wxml" />
+<view class='container'>
+  <view class='new-theme' bindtap='onNewTheme'>
+    <image class='new-theme-image' src='../../images/new_theme.png'></image>
+  </view>
+  <block wx:for="{{themeData}}" wx:for-item="themeData" wx:key="themeData_key">
+    <view class='theme-template' data-theme-id="{{themeData.themeId}}" bindtap='onThemeDetails'>
+      <template is="themeTemplate" data="{{...themeData}}" />
+    </view>
+  </block>
+</view>

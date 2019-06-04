@@ -1,0 +1,20 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/themes/themes",
+    "pages/newTheme/newTheme",
+    "pages/themeDetails/themeDetails",
+    "pages/ideaList/ideaList",
+    "pages/ideaList/newSubTheme/newSubTheme",
+    "pages/ideaList/ideaDetails/ideaDetails",
+    "pages/img/img"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fcb818",
+    "navigationBarTitleText": "头脑风暴",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

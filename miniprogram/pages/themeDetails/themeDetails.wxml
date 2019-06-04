@@ -1,0 +1,22 @@
+<!--miniprogram/pages/themeDetails/themeDetails.wxml-->
+<import src="ideaInfo/ideaInfo-template.wxml" />
+<view class='avatar-container'>
+  <view>
+    <text>邀请好友共同激发灵感</text>
+  </view>
+  <view class='avatar'>
+    <block wx:for="{{avatarUrlArr}}" wx:for-item="avatarUrlArr" wx:key="id">
+      <image src='{{avatarUrlArr}}'></image>
+    </block>
+    <button open-type='share' type='addFriend'></button>
+  </view>
+  <view class='create-mind-mapping'>
+    <button type="primary" size="mini" bindtap='toImg'>思维导图</button>
+  </view>
+</view>
+
+<!-- <template is="ideaInfoTemplate" data="{{...themeData[0]}}" /> -->
+
+<block wx:for="{{themeData}}" wx:key="themeData_key" wx:for-item="themeData">
+  <template is="ideaInfoTemplate" data="{{...themeData}}" />
+</block>

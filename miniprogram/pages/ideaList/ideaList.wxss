@@ -1,0 +1,101 @@
+/* miniprogram/pages/ideaDetails/ideaDetails.wxss */
+@import "idea/idea-template.wxss";
+
+page {
+  background-color: #fcb818;
+}
+
+/* .page-body-info {
+  padding: 30rpx 0 30rpx 0;
+}
+
+.page-body-text {
+  padding: 0 30rpx;
+  text-align: center;
+} */
+
+.theme-container {
+  width: 650rpx;
+  background-color: rgb(232, 232, 232);
+  margin: 25rpx auto;
+  border-radius: 15rpx;
+}
+
+.themeInfo {
+  padding: 5rpx 10rpx;
+}
+
+.themeInfo .theme {
+  padding: 10rpx;
+}
+
+.themeInfo .remark {
+  font-size: 30rpx;
+  margin-bottom: 30rpx;
+  padding: 0rpx 10rpx;
+}
+
+.themeInfo .remark text {
+  color: rgb(87, 86, 86);
+}
+
+/* .idea {
+  width: 600rpx;
+  height: 75rpx;
+  margin: 15rpx auto;
+  background-color: #f8f8f8;
+  padding-left: 10rpx;
+  line-height: 75rpx;
+}
+.idea text{
+  font-size: 35rpx;
+}
+.more-icon {
+  float: right;
+}
+
+.more-icon image {
+  height: 50rpx;
+  width: 50rpx;
+  vertical-align: middle;
+} */
+
+.addIdea {
+  height: 80rpx;
+  font-size: 30rpx;
+  /* display: flex; *//* justify-content: center; *//* vertical-align: middle; */
+  text-align: center;
+  line-height: 70rpx;
+}
+
+.addIdea-input input {
+  background-color: #f8f8f8;
+  height: 75rpx;
+  width: 600rpx;
+  margin: 15rpx auto;
+}
+
+/* .addIdea-input text{
+  margin: 10rpx;
+} */
+
+.addIdea-orNot {
+  /* float: left; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.addIdea-orNot text {
+  color: #df9c02;
+  /* color: #fab410; */
+  margin-bottom: 15rpx;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}

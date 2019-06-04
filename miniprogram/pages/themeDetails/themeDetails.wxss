@@ -1,0 +1,64 @@
+/* miniprogram/pages/themeDetails/themeDetails.wxss */
+@import "ideaInfo/ideaInfo-template.wxss";
+
+page {
+  background-color: #f8f8f8;
+}
+
+.avatar-container {
+  /* text-align: center; *//* width: 750rpx; */
+  height: 260rpx;
+  /* line-height: 450rpx; */
+  background-color: white;
+  /* float: left; */
+  margin-bottom: 30rpx;
+}
+
+.avatar-container text {
+  font-size: 30rpx;
+  margin-left: 50rpx;
+}
+
+.avatar {
+  margin: 15rpx 50rpx;
+  height: 90rpx;
+}
+
+.avatar image {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  /* margin-top: 15rpx; */
+  margin-right: 25rpx;
+}
+
+.create-mind-mapping {
+  float: right;
+  margin-right: 40rpx;
+}
+
+button[type=primary] {
+  color: black;
+  border: 1px solid #fcb818;
+  background-color: #fcb818;
+}
+
+button[type=addFriend] {
+  background-image: url('https://636c-cloud1-dda5a4-1259149706.tcb.qcloud.la/invite_friends.png?sign=1e68b45bdce765feb683d8f6f9ad817e&t=1559295853');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  border: 1px solid #fcb818;
+  border-radius: 80rpx;
+  width: 80rpx;
+  height: 80rpx;
+  background-color:white;
+  margin: 0;
+  display: inline-block;
+}
+
+.button-hover[type=primary] {
+  color: black;
+  border-color: rgba(253, 178, 0, 1);
+  background-color: rgba(253, 177, 0, 0.6);
+}

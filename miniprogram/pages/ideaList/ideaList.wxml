@@ -1,0 +1,92 @@
+<!--miniprogram/pages/ideaDetails/ideaDetails.wxml-->
+<import src="idea/idea-template.wxml" />
+<view class='theme-container'>
+  <view class='themeInfo'>
+    <view class='theme'>
+      <text>{{theme}}</text>
+    </view>
+    <view class='remark'>
+      <text class="weui-media-box__desc">{{remark}}</text>
+    </view>
+  </view>
+
+
+  <view>
+
+    <view wx:if="{{ideaData.length}}">
+      <block wx:for="{{ideaData}}" wx:for-item="ideaData" wx:key="ideaData_key" wx:for-index="idx" data-index="{{idx}}">
+        <!-- {{idx}} -->
+        <!-- <template is="ideaTemplate" data="{{...ideaData}}" /> -->
+        <view class="idea" bindtap='toIdeaDetails' data-index="{{idx}}">
+          <view>
+            <text>{{ideaData.idea}}</text>
+            <view class='more-icon' catchtap='onMore' data-index="{{idx}}">
+              <image src='/images/more_icon.png'></image>
+            </view>
+          </view>
+        </view>
+      </block>
+      <!-- <view class="idea" bindtap='toIdeaDetails'>
+        <view>
+          <text>{{ideaData}}</text>
+          <view class='more-icon' catchtap='onMore'>
+            <image src='../../images/more_icon.png'></image>
+          </view>
+        </view>
+      </view> -->
+    </view>
+
+    <view class="addIdea" wx:if="{{!ideaData.length}}">
+      <text>无数据</text>
+    </view>
+
+    <view class="addIdea {{!showAddIdeaInput?'show':'hide'}}" bindtap='onShowAddIdeaInput'>
+      <text>添加灵感</text>
+    </view>
+
+    <!-- 灵感输入框 -->
+    <view class="addIdea-input {{showAddIdeaInput?'show':'hide'}}">
+      <input bindinput='onGetInput' value="{{getInput}}"></input>
+      <view class='addIdea-orNot'>
+        <text style='margin-left:50rpx;' bindtap='onShowAddIdeaInput'>取消</text>
+        <text style='margin-right:50rpx;' bindtap='onAddIdea'>添加</text>
+      </view>
+    </view>
+
+
+
+    <!-- <view wx:if="{{todoList.length < 5 && !filtered}}"> -->
+    <!-- <view>
+      <view>
+        <input placeholder="添加灵感" value="{{newIdea}}" focus="{{todoListFetched && !todoList.length}}" bindinput="onInputNewContent" bindconfirm="createTodo" />
+      </view>
+    </view> -->
+
+  </view>
+
+  <!-- 
+  <view class="weui-cells weui-cells_after-title" wx:if="{{openid}}">
+    <view wx:for="{{todoList}}" wx:key="_id" class="weui-cell weui-cell_access" hover-class="weui-cell_active" data-id="{{item._id}}" bindtap="toDetail">
+      <view class="weui-cell__hd" data-id="{{item._id}}" data-index="{{index}}" catchtap="toggleComplete" style="margin-right: 10rpx">
+        <icon class="weui-icon-checkbox_circle" type="circle" wx:if="{{!item.done}}"></icon>
+        <icon class="weui-icon-checkbox_success" type="success" wx:else></icon>
+      </view>
+      <view class="weui-cell__bd">{{item.description}}</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </view>
+
+    <view class="weui-cell weui-cell_input" wx:if="{{todoList.length < 5 && !filtered}}">
+      <view class="weui-cell__bd">
+        <input class="weui-input" placeholder="添加新的 Todo" value="{{newContent}}" focus="{{todoListFetched && !todoList.length}}" bindinput="onInputNewContent" bindconfirm="createTodo" />
+      </view>
+    </view>
+  </view>
+  -->
+
+  <!-- <view class="page-body-info" wx:if="{{!todoList.length && filtered}}"> -->
+  <!-- <view class="page-body-info" wx:if="{{!todoList.length && filtered}}">
+    <text class="page-body-text">无数据</text>
+  </view> -->
+
+
+</view>

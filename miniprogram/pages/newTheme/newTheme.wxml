@@ -1,0 +1,12 @@
+<!--miniprogram/pages/newIdea.wxml-->
+<view class='container'>
+  <view class='theme'>
+    <text>中心主题</text>
+    <textarea auto-focus='' bindinput='getTheme'></textarea>
+  </view>
+  <view class='remark'>
+    <text>备注</text>
+    <textarea bindinput='getRemark'></textarea>
+  </view>
+  <button type="primary" plain="true" bindtap='onFinished'>完成</button>
+</view>
